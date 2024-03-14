@@ -11,8 +11,15 @@ class ContaCorrente:
     def depositar(self, valor):
         self.saldo += valor
 
+    def _limite_conta(self):
+        self.limite = -1000
+        return self.limite
+
     def sacar_dinheiro(self, valor):
         self.saldo -= valor
+
+    def consultar_limite_chequeespecial(self):
+         print('Seu limite de Cheque Especial é de R$ {:,.2f}'.format(self._limite_conta()))
 
 
 #Programa
